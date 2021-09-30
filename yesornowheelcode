@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta name="robots" content="noindex">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yes No Picker Wheel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+<div class="shadow-lg" id="wheel-box">
+        <div class="row">
+          <div
+            class="col-lg-7 col-md-7 col-sm-12 wheel-container d-flex justify-content-center"
+          >
+            <div id="chart"></div>
+          </div>
+          <div class="col-lg-5 mt-5 col-md-5 col-sm-12">
+            <div class="row p-sm-0 p-5">
+              <div
+                class="col-sm col-12 ml-sm-5 mr-lg-1 mr-sm-2 my-2 result-box"
+              >
+                <h2 id="yes-count">0</h2>
+                <p>YES</p>
+              </div>
+              <div
+                class="col-sm mr-lg-1 col-12 my-2 result-box"
+                id="maybe-container"
+                style="display: none;"
+              >
+                <h2 id="maybe-count">0</h2>
+                <p>MAYBE</p>
+              </div>
+              <div
+                class="col-sm col-12 mr-sm-5 ml-lg-1 mr-sm-2 my-2 result-box"
+              >
+                <h2 id="no-count">0</h2>
+                <p>NO</p>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button class="my-3" id="reset-btn">
+                  <img src="./assets/redo-solid.svg" alt="reset" />
+                </button>
+              </div>
+              <div class="col-12">
+                <p>Mode</p>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-12 col-sm ml-sm-5 mr-lg-1 p-0">
+                    <div class="input-sets text-center active-set" id="yes-no">
+                      YES or NO
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm mr-sm-5 ml-lg-1 p-0">
+                    <div class="input-sets text-center" id="yes-no-maybe">
+                      YES,NO or MAYBE
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-12 mt-4">
+                <p>Number of Input Sets</p>
+              </div> -->
+
+              <!-- <div class="col input-sets text-center" id="one">1</div>
+              <div class="col input-sets text-center" id="two">2</div>
+              <div class="col input-sets text-center active-set" id="three">3</div>
+              <div class="col input-sets text-center" id="four">4</div>
+              <div class="col input-sets text-center" id="five">5</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Pop Up -->
+    <div id="box">
+      <div id="alert-box">
+        <h1 id="selected-op">YES</h1>
+        <h4>Selected</h4>
+        <a href="#" class="close-btn" onclick="pop()">Close</a>
+      </div>
+    </div>
+    <audio src="./assets/Spinning Wheel - Gaming - Sound Effect (HD).mp3" id="spin-tick"></audio>
+    <audio src="./assets/Celebration Sound Effect.mp3" id="celeb"></audio>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+  </body>
+</html>
